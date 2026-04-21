@@ -1,20 +1,46 @@
 {
   "name": "rc-jh-component",
   "version": "1.0.0",
-  "description": "Demo component",
+  "description": "React component library with Loading and Skeleton components",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "package.json",
+    "LICENSE"
+  ],
   "author": "jhCom",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiveJj/live-loading.git"
+  },
+  "homepage": "https://github.com/LiveJj/live-loading#readme",
+  "keywords": [
+    "react",
+    "component",
+    "loading",
+    "skeleton",
+    "antd"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
   "peerDependencies": {
+    "antd": ">=6.0.0",
     "react": ">=18.0.0",
-    "react-dom": ">=18.0.0",
-    "antd": ">=6.0.0"
+    "react-dom": ">=18.0.0"
   },
   "dependencies": {
-    "antd": "^6.3.6",
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5"
+    "antd": ">=6.0.0",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
   },
   "devDependencies": {
+    "@types/css-modules": "^1.0.5",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "typescript": "^6.0.3"
