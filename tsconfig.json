@@ -1,4 +1,20 @@
 {
-	"files": [],
-	"references": [{ "path": "./tsconfig.cjs.json" }, { "path": "./tsconfig.esm.json" }]
+	"compilerOptions": {
+		"target": "ESNext", // 目标 ECMAScript 版本
+		"lib": ["ESNext", "DOM", "DOM.Iterable"], // 包含的库文件定义
+		"jsx": "react-jsx", // JSX 转换方式
+		"module": "ESNext", // 模块系统
+		"moduleResolution": "bundler", // 模块解析策略
+		"rootDir": "./src", // 源代码根目录
+		"outDir": "./dist", // 输出目录
+		"declaration": true, // 生成类型声明文件
+		"sourceMap": true, // 生成源映射文件
+		"esModuleInterop": true, // ES 模块互操作性
+		"skipLibCheck": true, // 跳过库文件类型检查
+		"resolveJsonModule": true, // 允许导入 JSON 文件
+		"allowSyntheticDefaultImports": true, // 允许从没有默认导出的模块中默认导入
+		"forceConsistentCasingInFileNames": true // 强制文件名大小写一致
+	},
+	"include": ["src"], // 包含的源文件
+	"exclude": ["node_modules", "dist", "**/__tests__/**", "**/*.test.ts", "**/*.test.tsx"] // 排除的文件和目录
 }

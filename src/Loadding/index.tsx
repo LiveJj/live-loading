@@ -37,7 +37,7 @@ const Loading: React.FC<LoadingProps> = ({
 	if (!state || !shouldRender) return null;
 
 	return (
-		<div className={`${styles.loadingMask} ${fullScreen ? styles.isFullScreen : ""}`}>
+		<div data-testid="loading-mask" className={`${styles.loadingMask} ${fullScreen ? styles.isFullScreen : ""}`}>
 			<div className={styles.loading}>
 				{Array.from({ length: 36 }).map((_, index) => (
 					<div key={index} className={styles.dot} />
