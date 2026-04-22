@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		/* ========== 共享配置项 ========== */
+		"target": "ESNext", // 目标 ECMAScript 版本（最新特性）
+		"lib": ["ESNext", "DOM", "DOM.Iterable"], // 包含的库文件定义（最新特性）
+		"jsx": "react-jsx", // JSX 转换为 React.createElement
+		"declaration": true, // 生成 .d.ts 类型声明文件
+		"declarationMap": true, // 生成 .d.ts.map 类型声明映射文件
+		"sourceMap": true, // 生成 .js.map 源映射文件，便于调试
+		"esModuleInterop": true, // 启用 ES 模块互操作性
+		"skipLibCheck": true, // 跳过库文件的类型检查，提高编译速度
+		"strict": true, // 启用所有严格类型检查选项
+		"resolveJsonModule": true, // 允许导入 JSON 文件
+		"allowSyntheticDefaultImports": true, // 允许从没有默认导出的模块中默认导入
+		"forceConsistentCasingInFileNames": true, // 强制文件名大小写一致
+		"composite": true, // 启用复合项目模式，用于 project references
+
+		/* ========== CJS 单独配置项 ========== */
+		"module": "Node16", // Node16 模块系统（支持 CommonJS 和 ESM）
+		"moduleResolution": "node16", // Node.js 16+ 模块解析策略（与 Node.js >= 12.7.0 匹配）
+		"rootDir": "./src", // 源代码根目录
+		"outDir": "./dist/cjs" // 输出目录（CommonJS 格式）
+	},
+	"include": ["src/**/*"], // 包含的源文件
+	"exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.test.tsx"] // 排除的文件和目录
+}
