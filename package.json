@@ -30,7 +30,8 @@
     "loading"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && npm run copy:css",
+    "copy:css": "copyfiles -u 1 \"src/**/*.css\" dist",
     "prepublishOnly": "npm run build",
     "test": "vitest",
     "test:ui": "vitest --ui",
@@ -54,6 +55,7 @@
     "@types/css-modules": "^1.0.5",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "copyfiles": "^2.4.1",
     "jsdom": "^29.0.2",
     "typescript": "^6.0.3",
     "vitest": "^4.1.5"
