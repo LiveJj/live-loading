@@ -1,6 +1,6 @@
 {
   "name": "rc-jh-component",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "React component library with Loading and Skeleton components",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
